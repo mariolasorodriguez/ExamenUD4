@@ -203,22 +203,22 @@ public class MainEmpleados {
         System.out.println("Introduce el DNI: ");
         dni = reader.next();
         reader.nextLine();
-        System.out.println("¿Está segur@ de eliminar el vehiculo?");
+        System.out.println("¿Está segur@ de eliminar el empleado?");
 
         Empleado encontrado = lista.buscarPorDni(dni);
         if (encontrado != null) {
-            System.out.println("¿Esta segur@ de eliminar este vehiculo? s/n");
+            System.out.println("¿Esta segur@ de eliminar este empleado? s/n");
             System.out.println(encontrado);
             String confirmacion = reader.nextLine();
 
             if (confirmacion.equalsIgnoreCase("s")) {
                 lista.eliminarPorDni(dni);
-                System.out.println("El vehiculo ha sido eliminado correctamente.");
+                System.out.println("El empleado ha sido eliminado correctamente.");
             } else {
                 System.out.println("Operacion cancelada.");
             }
         } else {
-            System.out.println("No se encontro el vehiculo");
+            System.out.println("No se encontro el empleado");
         }
 	}
 	
